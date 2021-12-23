@@ -2,7 +2,7 @@
 ### 初始化后出现的三个文件
 index.html 入口文件
 README.md 会做为主页内容渲染
-.nojekyll 用于阻止 GitHub Pages 会忽略掉下划线开头的文件
+.nojekyll ./docs 目录下创建一个 .nojekyll 文件，以防止 GitHub Pages 忽略下划线开头的文件。
 
 
 
@@ -99,6 +99,30 @@ https://jhildenbiddle.github.io/docsify-themeable/#/themes?id=simple
 
 然后在根目录创建自己的_sidebar.md文件，配置我们需要显示的页面。详细操作步骤参考官方多页文档教程。https://links.jianshu.com/go?to=https%3A%2F%2Fdocsify.js.org%2F%23%2Fzh-cn%2Fmore-pages
 注：配置了loadSidebar后就不会生成默认的侧边栏了。
+```html
+* Introduction
+    * [简介](README.md)
+
+
+- 一级目录1
+    - [总概](README.md)
+    - <details><summary><b>二级目录1</b></summary>
+      <p>
+
+        - [实例1](/zh-cn/test1.md) 
+        - [实例2](/zh-cn/test2.md)
+        - [实例3](README.md)
+        - [实例4](README.md)
+        - [实例5](README.md)
+
+      </p>
+      </details>
+    
+
+* 一级目录2
+    - [实例1](/zh-cn/test1.md)
+    - [实例2](/zh-cn/test2.md)
+```
 
 ### 插件
 

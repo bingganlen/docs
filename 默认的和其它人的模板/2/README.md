@@ -1,8 +1,9 @@
 # 《文档模板使用教程》
 
-[<img src="https://img.shields.io/badge/Gitte-Welcome-yellow">](https://gitee.com/daskj/docs-template/tree/master/docs) [<img src="https://img.shields.io/badge/%E7%A4%BA%E4%BE%8B-%E6%AC%A2%E8%BF%8E%E8%AE%BF%E9%97%AE-important">](http://daskj.gitee.io/docs-template/)
+[<img src="https://img.shields.io/badge/%E7%A4%BA%E4%BE%8B-%E6%AC%A2%E8%BF%8E%E8%AE%BF%E9%97%AE-important">](http://daskj.gitee.io/docs-template/)
 
-> 本文档模板是本着```开箱即用```的思想做的,为某些刚上手使用```docsify```但又不清楚如何制作`属于自己的文档`的小伙伴提供的一个模板,以下只是提供了一个常用的配置设置，更多自定义请参考[官方文档](https://docsify.js.org/#/zh-cn/)
+> 转载自[<img src="https://img.shields.io/badge/Gitte-Welcome-yellow">](https://gitee.com/daskj/docs-template/tree/master/docs)  主要按内容进行分文件夹整理，利于维护  
+本文档模板是本着```开箱即用```的思想做的,为某些刚上手使用```docsify```但又不清楚如何制作`属于自己的文档`的小伙伴提供的一个模板,以下只是提供了一个常用的配置设置，更多自定义请参考[官方文档](https://docsify.js.org/#/zh-cn/)
 
 ## 快速导航
 
@@ -33,7 +34,8 @@
 	```<img src="https://img.shields.io/maven-central/v/org.apache.maven/apache-maven">```
 
 ## 静态肩徽制作
-- 在[**shields.io**](https://shields.io/)页面中找到`Static`的标签
+- 在[**shields.io**](https://shields.io/)页面中找到`Static`的标签  
+  <img style="border-radius: 50%" bor src="../../img/staticshields.JPG">
 - 在label处输入肩徽的前半段文字,在message处输入肩徽的后半段文字,选择一个自己喜欢的颜色
 	> 在下方有颜色的预览
 - 最后点击`Make Badge`跳转到预览界,复制浏览器地址栏中的地址即可使用
