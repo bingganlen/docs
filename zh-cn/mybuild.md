@@ -8,20 +8,27 @@ README.md 会做为主页内容渲染
 
 
 ### 搭建过程  过程中存在的报错也一并记录
-
+>前提： 需安装node.js  主要是为了生成初始化文件  如果你拷贝了文件，当我这个前提没说
  
-最近公司一直网络错误
+>最近公司一直网络错误
 删除掉删除用户目录下的.npmrc  又可以了
+```
 npm i docsify-cli -g
+```
 然后我在Git clone 已经创建在gitee上的docs空仓库，在控制台输入 
+```
 docsify init ./
+```
 不行  cli安装成功后，init 初始化，报：
-'docsify' 不是内部或外部命令，也不是可运行的程序 或批处理文件
-设置了环境变量，在idea控制台依然显示docsify不是内部和外部的命令
+'docsify' 不是内部或外部命令，也不是可运行的程序 或批处理文件  
+设置了环境变量，在idea控制台依然显示docsify不是内部和外部的命令  
 然后我在下面位置输入cmd，弹出当前目录的cmd窗口
-成功创建docs文件夹和里面的文件，因为前面我已经clone下来，文件夹已存在，所以我选择覆盖
+<img src="img/clipboard.png">
+成功创建docs文件夹和里面的文件，因为前面我已经clone下来，文件夹已存在，所以我选择覆盖  
 根据命令提示我输入
+```
 docsify serve docs
+```
 在浏览器输入http://localhost:3000/#/  查看
 
 你直接下载Github仓库的项目是没办法打开index.html
@@ -127,3 +134,16 @@ https://jhildenbiddle.github.io/docsify-themeable/#/themes?id=simple
 ### 插件
 
 官方还提供了非常多实用的插件，比如说全文搜索、解析emoji表情、一键复制代码等等，完整版请参考官方插件列表。https://links.jianshu.com/go?to=https%3A%2F%2Fdocsify.js.org%2F%23%2Fzh-cn%2Fplugins
+
+### 似乎有bug  ： 页面导航有时候没有刷新
+docsify为什么导航没有刷新？
+最后发现是zh-cn文件夹里面的导航修改了，但是docs根目录下的_saber.md文件没有发生修改
+解决： index.html添加一个如下配置，然后去掉zh-cn文件夹下的_sidebar.md，这样只维护一个目录就够了。
+```javascript
+window.$docsify = {
+    alias: { // 定义路由别名，可以更自由的定义路由规则。 支持正则
+        '/.*/_sidebar.md': '/_sidebar.md',//防止意外回退  避免编辑多个sidebar目录文件
+        '/.*/_navbar.md': '/_navbar.md'
+    },
+}
+```

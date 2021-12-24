@@ -14,7 +14,6 @@
 - [全局搜索配置](#全局搜索配置)
 - [如何启动项目](#如何启动项目)
 - [中英文支持](#中英文支持)
-- [多页文档](#多页文档)
 - [更多文档平台推荐](#更多文档平台推荐)
 
 # 肩徽制作
@@ -23,31 +22,26 @@
 ## 动态肩徽制作
 - 首先,进入[**shields.io**](https://shields.io/)选择自己需要的肩徽类型
 - 这里我们用`Version`标签做一下示例
-    - 在平常的时候我们经常会见到在Github中Java类项目有如下的肩徽
+	- 在平常的时候我们经常会见到在Github中Java类项目有如下的肩徽
 
-  <img src="https://img.shields.io/maven-central/v/org.apache.maven/apache-maven">
+	<img src="https://img.shields.io/maven-central/v/org.apache.maven/apache-maven">
 
-  这样的肩徽标识者当前项目发布在`MavenCenterl`的最新版本号
-    - 首先我们先进入`Version`便签，按下`Ctrl+F`打开浏览器搜索框，输入`maven`,我们将会看到有关`Maven`的三个肩徽
+	这样的肩徽标识者当前项目发布在`MavenCenterl`的最新版本号
+	- 首先我们先进入`Version`便签，按下`Ctrl+F`打开浏览器搜索框，输入`maven`,我们将会看到有关`Maven`的三个肩徽
 
-  ![](./img/maven-logo.png)
-    - 我们点击`Maven Central`进入制作页面,在groupid和artifactid处输入我们发布到`mavenCentral`的组件,稍后页面会自动搜索查找,在下方实时显示版本肩徽,此时我们只需点击`Copy Badge Url`获取肩徽的url地址,在需要使用的地方使用如下语法即可使用：
-      ```<img src="https://img.shields.io/maven-central/v/org.apache.maven/apache-maven">```
+	![](./img/maven-logo.png)
+	- 我们点击`Maven Central`进入制作页面,在groupid和artifactid处输入我们发布到`mavenCentral`的组件,稍后页面会自动搜索查找,在下方实时显示版本肩徽,此时我们只需点击`Copy Badge Url`获取肩徽的url地址,在需要使用的地方使用如下语法即可使用：
+	```<img src="https://img.shields.io/maven-central/v/org.apache.maven/apache-maven">```
 
 ## 静态肩徽制作
 - 在[**shields.io**](https://shields.io/)页面中找到`Static`的标签  
-  <img src="./img/staticshields.JPG">
+  <img style="border-radius: 50%" bor src="../../img/staticshields.JPG">
 - 在label处输入肩徽的前半段文字,在message处输入肩徽的后半段文字,选择一个自己喜欢的颜色
-  > 在下方有颜色的预览
+	> 在下方有颜色的预览
 - 最后点击`Make Badge`跳转到预览界,复制浏览器地址栏中的地址即可使用
 
 # 文档主题修改
 > 进入项目目录找到`index.html`找到`<script>`标签中`window.$docsify`处修改`name`即可,同时还需要修改一下HTML界面的```<title>文档制作教程</title>```
-我喜欢的主题是 
-```html
-<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/themes/dolphin.css">
-```
-
 
 # 侧边导航栏制作
 > 打开侧边导航栏配置文件`_sidebar.md`,其中已经预设了一、二、三级目录以及样式，可以根据自己的需要修改
@@ -70,9 +64,6 @@ var gitalkConfig = {
       admin: ["q-angelo"],
       distractionFreeMode: false
     };
-
-配置Gitee码云的评论的话 
-参考https://www.bianchengquan.com/article/256984.html
 ```
 - 插件应用
 ```js
@@ -105,9 +96,9 @@ plugins: [
 
 # 全局搜索配置
 - 确保添加`search.js`
-  `<script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/search.js"></script>`
+`<script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/search.js"></script>`
 - 配置search选项
-  **打开`index.html`找到`<script>`标签中`window.$docsify`处**
+	**打开`index.html`找到`<script>`标签中`window.$docsify`处**
 ```js
 search: {
       maxAge: 86400000, // 过期时间，单位毫秒，默认一天
@@ -134,35 +125,35 @@ search: {
 
 # 如何启动项目
 - 使用常规方式(NodeJs安装启动)
-    - 先确定正确安装了[**NodeJs**](http://nodejs.cn/download/)
-    - 安装docsify-cli
-        - 使用npm安装
-          `npm i docsify-cli -g`
-        - 使用yarn安装
-          `yarn global add docsify-cli`
-    - 配置环境变量(如果之前配置过则忽略)
-        - 查看可执行文件所在位置
-          `yarn global bin`
-          `npm bin -g`
-        - 添加进系统环境变量
+	- 先确定正确安装了[**NodeJs**](http://nodejs.cn/download/)
+	- 安装docsify-cli
+		- 使用npm安装
+		`npm i docsify-cli -g`
+		- 使用yarn安装
+		`yarn global add docsify-cli`
+	- 配置环境变量(如果之前配置过则忽略)
+		- 查看可执行文件所在位置
+		`yarn global bin`
+		`npm bin -g`
+		- 添加进系统环境变量
 
-    - 进入项目目录
-      `docsify serve ./docs`
+	- 进入项目目录
+		`docsify serve ./docs`
 
-    - 打开浏览器查看 [**http://localhost:3000**](http://localhost:3000)
+	- 打开浏览器查看 [**http://localhost:3000**](http://localhost:3000)
 - 使用docker查看
-  (如果你的系统内没有nodejs或是你不想进行繁琐的配置推荐此方法)
-    - 获取docsify镜像环境(只有90+M)
-      `docker pull quintoandar/docsify`
-    - 运行对应容器
+	(如果你的系统内没有nodejs或是你不想进行繁琐的配置推荐此方法)
+	- 获取docsify镜像环境(只有90+M)
+	`docker pull quintoandar/docsify`
+	- 运行对应容器
 
-  `docker run -d -p 3000:3000 -v /mnt/hgfs/Centos/guide/docs:/docs --name docs quintoandar/docsify`
+	`docker run -d -p 3000:3000 -v /mnt/hgfs/Centos/guide/docs:/docs --name docs quintoandar/docsify`
 
-  (请将`/mnt/hgfs/Centos/guide/docs`替换为你电脑上对应docs的路径)
-    - 打开浏览器查看 [**http://localhost:3000**](http://localhost:3000)
+	(请将`/mnt/hgfs/Centos/guide/docs`替换为你电脑上对应docs的路径)
+	- 打开浏览器查看 [**http://localhost:3000**](http://localhost:3000)
 - 文档编辑后如何查看修改
-    - Linux环境下需要手动刷新浏览器
-    - Windows环境下每次文件被修改后,会自动刷新
+	- Linux环境下需要手动刷新浏览器
+	- Windows环境下每次文件被修改后,会自动刷新
 
 # 中英文支持
 > 由于现在一个地球村的思想,国际化已经是很常见的事,所以文档对英文的支持也是很有必要的
@@ -173,25 +164,10 @@ search: {
 - 配置最外层`index.html`下
 ```js
 window.$docsify = {
-    coverpage: ['/', '/en-us/']
+   coverpage: ['/', '/en-us/']
 };
 ```
 - 启动服务，访问 [**http://localhost:3000/#/en-us**](http://localhost:3000/#/en-us)
-
-# 多页文档
-多页目录存在的saber左导航需要维护
-1、创建zh-cn  这样文档链接就是 /zh-cn/ 会默认转成中文，详细看上面的中英文支持
-<img src="./img/目录.JPG"/>
-2、 设定路由，这样内容增加时只需修改docs根目录下的_saber.md  
-路径就变成 ： zh-cn/算法/双指针.md  算法是一级目录
-```javascript
-window.$docsify = {
-    alias: { // 定义路由别名，可以更自由的定义路由规则。 支持正则
-        '/.*/_sidebar.md': '/_sidebar.md',//防止意外回退  避免编辑多个sidebar目录文件
-        '/.*/_navbar.md': '/_navbar.md'
-    },
-}
-```
 
 # 更多文档平台推荐
 
@@ -202,4 +178,3 @@ window.$docsify = {
 - [Apizza API接口管理](https://apizza.net/pro/#/)
 - [易文档](https://easydoc.xyz/#/)(**强烈推荐**)
 - [石墨文档](https://shimo.im/welcome)
-
