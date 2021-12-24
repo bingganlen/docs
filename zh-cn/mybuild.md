@@ -1,4 +1,7 @@
 
+
+[官网](https://docsify.js.org/)
+
 ### 初始化后出现的三个文件
 index.html 入口文件
 README.md 会做为主页内容渲染
@@ -23,7 +26,7 @@ docsify init ./
 'docsify' 不是内部或外部命令，也不是可运行的程序 或批处理文件  
 设置了环境变量，在idea控制台依然显示docsify不是内部和外部的命令  
 然后我在下面位置输入cmd，弹出当前目录的cmd窗口
-<img src="img/clipboard.png">
+<img src="img/articles/clipboard.png">
 成功创建docs文件夹和里面的文件，因为前面我已经clone下来，文件夹已存在，所以我选择覆盖  
 根据命令提示我输入
 ```
@@ -147,3 +150,31 @@ window.$docsify = {
     },
 }
 ```
+
+
+### 部署前
+创建仓库 提交仓库
+```
+git add .
+git commit -m 'msg'
+git push orgin master // 这个之前需要提供 gitHub 账号和密码
+```
+
+### 部署在码云
+网友都说不行，虾米，我试试开启
+Gitee Pages 服务（开源项目静态效果演示用途）
+<img src="img/articles/article1.JPG">
+等我实名认证后
+
+我以前也在Gitee网站上搭建过，果然链接404了，但我repo的图库还在
+
+### 部署在个人服务器
+首先，docsify是静态的无后台的，它只要使用域名能访问到index.html,就是部署成功
+服务器我有，把项目docs文件夹放在www.junhao.host域名所在的目录下
+使用www.junhao.host/docs即可访问
+但是保险一点，配置一下nginx
+路由www.junhao.host/docs，后面是重定向的位置
+
+
+### 部署在Github
+https://github.com/bingganlen/docs

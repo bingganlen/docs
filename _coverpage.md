@@ -5,7 +5,7 @@
 [comment]: <> (<div align="center"> <img src="xx.png"  style="zoom:50%;"> </div>)
 
 
-# 测试说明文档
+# The Best Way 
 
 > 可以的话写一个八股. 这样很方面面试前复习 
 

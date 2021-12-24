@@ -1,205 +1,53 @@
-# 《文档模板使用教程》
 
-[<img src="https://img.shields.io/badge/%E7%A4%BA%E4%BE%8B-%E6%AC%A2%E8%BF%8E%E8%AE%BF%E9%97%AE-important">](http://daskj.gitee.io/docs-template/)
+<img width="160px" height="160px" style="border-radius: 50%" bor src="./img/200af6e0b1962adc7258b4531d465f8e.jpg">
 
-> 转载自[<img src="https://img.shields.io/badge/Gitte-Welcome-yellow">](https://gitee.com/daskj/docs-template/tree/master/docs)  主要按内容进行分文件夹整理，利于维护  
-本文档模板是本着```开箱即用```的思想做的,为某些刚上手使用```docsify```但又不清楚如何制作`属于自己的文档`的小伙伴提供的一个模板,以下只是提供了一个常用的配置设置，更多自定义请参考[官方文档](https://docsify.js.org/#/zh-cn/)
+
+
+# 前言
+> 通知： 如果想要空白的demo文档，你可以Git clone下来，然后回退到“删除评论功能、调整导航目录等”这个位置即可
+
+* docsify 仅仅是解析MD文档的生成器
+* 内容是应对面试的八股
+* 不重要请勿看
+
+
+
+
+
+
+# 写给自己
+> 谨记：
+> * 当你不开心的时候，不要悲伤，不要抱怨，想想吃饭吃什么然后洗洗睡更有意义，时间不会停滞，你不会永远负面，第二天能记录下来的，只剩下感慨。
+> * 无聊的时候，什么？你竟然会无聊？年计划进度条看了吗？
+> * 总有个绳索在绊住你的脚步，你却无法绕开，也不能绕开
+> * 你似乎拥有着 shiming
 
 ## 快速导航
+> 以下是我,,,在这里,一波
 
-- [肩徽制作](#肩徽制作)
-- [文档主题修改](#文档主题修改)
-- [侧边导航栏制作](#侧边导航栏制作)
-- [评论系统](#评论系统)
-- [全局搜索配置](#全局搜索配置)
-- [如何启动项目](#如何启动项目)
-- [中英文支持](#中英文支持)
-- [多页文档](#多页文档)
-- [更多文档平台推荐](#更多文档平台推荐)
-
-# 肩徽制作
-> 很多小伙伴可能还不知道如何制作属于自己的肩徽，在这里就一并奉上肩徽制作的方法
-
-## 动态肩徽制作
-- 首先,进入[**shields.io**](https://shields.io/)选择自己需要的肩徽类型
-- 这里我们用`Version`标签做一下示例
-    - 在平常的时候我们经常会见到在Github中Java类项目有如下的肩徽
-
-  <img src="https://img.shields.io/maven-central/v/org.apache.maven/apache-maven">
-
-  这样的肩徽标识者当前项目发布在`MavenCenterl`的最新版本号
-    - 首先我们先进入`Version`便签，按下`Ctrl+F`打开浏览器搜索框，输入`maven`,我们将会看到有关`Maven`的三个肩徽
-
-  ![](./img/maven-logo.png)
-    - 我们点击`Maven Central`进入制作页面,在groupid和artifactid处输入我们发布到`mavenCentral`的组件,稍后页面会自动搜索查找,在下方实时显示版本肩徽,此时我们只需点击`Copy Badge Url`获取肩徽的url地址,在需要使用的地方使用如下语法即可使用：
-      ```<img src="https://img.shields.io/maven-central/v/org.apache.maven/apache-maven">```
-
-## 静态肩徽制作
-- 在[**shields.io**](https://shields.io/)页面中找到`Static`的标签  
-  <img src="./img/staticshields.JPG">
-- 在label处输入肩徽的前半段文字,在message处输入肩徽的后半段文字,选择一个自己喜欢的颜色
-  > 在下方有颜色的预览
-- 最后点击`Make Badge`跳转到预览界,复制浏览器地址栏中的地址即可使用
-
-# 文档主题修改
-> 进入项目目录找到`index.html`找到`<script>`标签中`window.$docsify`处修改`name`即可,同时还需要修改一下HTML界面的```<title>文档制作教程</title>```
-我喜欢的主题是 
-```html
-<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/themes/dolphin.css">
-```
+- [参考文档略修改](/zh-cn/refer.md)
+- [我的创作历程](/zh-cn/mybuild.md)
+- [首页  - 似乎在完善，但遥遥无期，被大计划耽搁了](https://www.junhao.host)
+- [博客  - 可能博客只能记录片段，没有看Github整个项目那么清晰](http://blog.junhao.host/)
 
 
-# 侧边导航栏制作
-> 打开侧边导航栏配置文件`_sidebar.md`,其中已经预设了一、二、三级目录以及样式，可以根据自己的需要修改
 
-# 评论系统
-> 评论系统配置可以参考
 
-- [**在个人博客里添加评论系统--Gitalk**](https://www.jianshu.com/p/656e6101bf0f)
-- [**官方文档**](https://github.com/gitalk/gitalk)
+## 风（丰）年
+风年是本人阶段性规划而定义的名字，意为丰登富实自己，又要求自己如风般自在、勇敢与野性
+* 换工作后，一年存款超过去年前年的总和，是为丰；搬家的家当更多（-_-||），知识储备增加，交友更广，是为丰 。
+* 远离舒适圈，驱散（雨年）烦恼与悲伤交集的雨，于世界上无所畏惧、无所不在却不可琢磨的野风
+* 也有另一种意思，只有我自己懂，你懂，你不懂
 
-> 主要的配置都在`index.html`的script脚本中,主要包括以下两个部分
+ 
 
-- 配置声明
-```js
-var gitalkConfig = {
-      clientID: '084f309ea8bc385148bc',
-      clientSecret: 'fa4bff71adc7fbb44a7ca6deffecc9ec43e29301',
-      repo: 'Nodejs-Roadmap',
-      owner: 'q-angelo',
-      admin: ["q-angelo"],
-      distractionFreeMode: false
-    };
-
-配置Gitee码云的评论的话 
-参考https://www.bianchengquan.com/article/256984.html
-```
-- 插件应用
-```js
-plugins: [
-        function (hook, vm) {
-          hook.doneEach(function() {
-            var label, domObj, main, divEle, gitalk;
-            label = vm.route.path.split("/").pop();
-            domObj = Docsify.dom;
-            main = domObj.getNode("#main");
-            Array.apply(
-              null,
-              document.querySelectorAll("div.gitalk-container")
-            ).forEach(function(ele) {
-              ele.remove();
-            });
-            divEle = domObj.create("div");
-            divEle.id = "gitalk-container-" + label;
-            divEle.className = "gitalk-container";
-            divEle.style = "width: " + main.clientWidth + "px; margin: 0 auto 20px;";
-            domObj.appendTo(domObj.find(".content"), divEle);
-            gitalk = new Gitalk(
-              Object.assign(gitalkConfig, { id: !label ? "home" : label })
-            );
-            gitalk.render("gitalk-container-" + label);
-          });
-        }
-      ]
-```
-
-# 全局搜索配置
-- 确保添加`search.js`
-  `<script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/search.js"></script>`
-- 配置search选项
-  **打开`index.html`找到`<script>`标签中`window.$docsify`处**
-```js
-search: {
-      maxAge: 86400000, // 过期时间，单位毫秒，默认一天
-      paths: [], // or 'auto'
-      placeholder: 'Type to search',
-
-      // 支持本地化
-      placeholder: {
-        '/zh-cn/': '搜索',
-        '/': 'Type to search'
-      },
-
-      noData: 'No Results!',
-
-      // 支持本地化
-      noData: {
-        '/zh-cn/': '找不到结果',
-        '/': 'No Results'
-      },
-      // 搜索标题的最大程级, 1 - 6
-      depth: 2
-    }
-```
-
-# 如何启动项目
-- 使用常规方式(NodeJs安装启动)
-    - 先确定正确安装了[**NodeJs**](http://nodejs.cn/download/)
-    - 安装docsify-cli
-        - 使用npm安装
-          `npm i docsify-cli -g`
-        - 使用yarn安装
-          `yarn global add docsify-cli`
-    - 配置环境变量(如果之前配置过则忽略)
-        - 查看可执行文件所在位置
-          `yarn global bin`
-          `npm bin -g`
-        - 添加进系统环境变量
-
-    - 进入项目目录
-      `docsify serve ./docs`
-
-    - 打开浏览器查看 [**http://localhost:3000**](http://localhost:3000)
-- 使用docker查看
-  (如果你的系统内没有nodejs或是你不想进行繁琐的配置推荐此方法)
-    - 获取docsify镜像环境(只有90+M)
-      `docker pull quintoandar/docsify`
-    - 运行对应容器
-
-  `docker run -d -p 3000:3000 -v /mnt/hgfs/Centos/guide/docs:/docs --name docs quintoandar/docsify`
-
-  (请将`/mnt/hgfs/Centos/guide/docs`替换为你电脑上对应docs的路径)
-    - 打开浏览器查看 [**http://localhost:3000**](http://localhost:3000)
-- 文档编辑后如何查看修改
-    - Linux环境下需要手动刷新浏览器
-    - Windows环境下每次文件被修改后,会自动刷新
-
-# 中英文支持
-> 由于现在一个地球村的思想,国际化已经是很常见的事,所以文档对英文的支持也是很有必要的
-
-- 在docs目录下创建en-us目录
-- 将docs下原来的文件都复制到en-us目录
-- 在en-us下的目录翻译为指定语言
-- 配置最外层`index.html`下
-```js
-window.$docsify = {
-    coverpage: ['/', '/en-us/']
-};
-```
-- 启动服务，访问 [**http://localhost:3000/#/en-us**](http://localhost:3000/#/en-us)
-
-# 多页文档
-多页目录存在的saber左导航需要维护
-1、创建zh-cn  这样文档链接就是 /zh-cn/ 会默认转成中文，详细看上面的中英文支持
-<img src="./img/目录.JPG"/>
-2、 设定路由，这样内容增加时只需修改docs根目录下的_saber.md  
-路径就变成 ： zh-cn/算法/双指针.md  算法是一级目录
-```javascript
-window.$docsify = {
-    alias: { // 定义路由别名，可以更自由的定义路由规则。 支持正则
-        '/.*/_sidebar.md': '/_sidebar.md',//防止意外回退  避免编辑多个sidebar目录文件
-        '/.*/_navbar.md': '/_navbar.md'
-    },
-}
-```
-
-# 更多文档平台推荐
-
-> 以下是我平常使用的一些好用文档平台和工具,在这里分享一波
-
-- [EOLINKER API一站式服务](https://www.eolinker.com/#/)(**强烈推荐**)
-- [Markdown表格在线制作](http://www.tablesgenerator.com/markdown_tables)
-- [Apizza API接口管理](https://apizza.net/pro/#/)
-- [易文档](https://easydoc.xyz/#/)(**强烈推荐**)
-- [石墨文档](https://shimo.im/welcome)
-
+## 无语
+*  第一次笔记：大三之前的笔记全部记录在docs和Excel本地文档里面，缺陷是因为硬盘故障，数据恢复失败，解救的文档无法打开编辑，大概80多个文档格式原因打开乱码，它永远消逝在历史长河中。
+*  第二次笔记：两年多时间 6成内容在CSDN, 少部分在个人网站和GitHub；CSDN商业化很严重，虽SEO良好，但编辑博客经常卡顿（一卡几个小时），数篇文章因为自动保存+导致遗失内容，多次恶意举报、多次图片显示失效严重丧失好感。 很有意思的是600多个草稿，70个公开
+   个人网站被攻击过也有惊无险
+*  第三次笔记：有道云笔记 + 个人网站 ；增加防丢失风险，每日自动保存，每周自动下载到本地。逐渐系统化疏通自己的所学。有趣的是
+   - 印象笔记一直发优惠，形似卷款跑路；
+   - OneNote的话，公司win10系统电脑一直无法登陆
+   - 原以为笔记记录的仅仅是技术，还有生活 
+*  第四次笔记： 也就是这次决定用docsify，不想写接口填充它是明年合理利用摸鱼时间的计划；我也纳闷，为什么这个岗位的工作强度这么不稳定，不过运维的朋友似乎更闲的样子~
+* 一个全新机械硬盘用来存储不常用的数据，它的寿命一般在20年，固态硬盘不用存放一年，电子的消失会导致数据消失，我没有在提醒你什么，至此
