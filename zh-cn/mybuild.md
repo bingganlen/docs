@@ -166,7 +166,7 @@ Gitee Pages 服务（开源项目静态效果演示用途）
 <img src="img/articles/article1.JPG">
 等我实名认证后
 
-我以前也在Gitee网站上搭建过，果然链接404了，但我repo的图库还在
+一年前我在Gitee网站上搭建过，果然链接404了，但我repo的图库还在，也是实名验证问题吗
 
 ### 部署在个人服务器
 首先，docsify是静态的无后台的，它只要使用域名能访问到index.html,就是部署成功
@@ -178,3 +178,11 @@ Gitee Pages 服务（开源项目静态效果演示用途）
 
 ### 部署在Github
 https://github.com/bingganlen/docs
+打开settings，有一个Github Pages 的设置（或者直接在左导航点击Page），点击 source 中的本来的 None ，使其变成 master 分支
+<img src="img/articles/mybuild/MAKEGitHub1.JPG" />
+<img src="img/articles/mybuild/MAKEGitHub2.JPG" />
+<img src="img/articles/mybuild/MAKEGitHub3.JPG" />
+点击 save后出现一个网址
+Your site is ready to be published at https://bingganlen.github.io/docs/
+
+其它： 一次提交到GitHub和Gitee
