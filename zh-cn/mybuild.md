@@ -134,6 +134,14 @@ https://jhildenbiddle.github.io/docsify-themeable/#/themes?id=simple
     - [实例2](/zh-cn/test2.md)
 ```
 
+#### 路径问题
+以项目根目录为准, 不管md文档在根目录的哪个子目录里面，路径从根目录下开始
+不是以自身文档所在目录为准
+```javascript
+<img src="img/xx/xx.JPG">
+[实例2](/zh-cn/test2.md)
+```
+
 ### 插件
 
 官方还提供了非常多实用的插件，比如说全文搜索、解析emoji表情、一键复制代码等等，完整版请参考官方插件列表。https://links.jianshu.com/go?to=https%3A%2F%2Fdocsify.js.org%2F%23%2Fzh-cn%2Fplugins
@@ -164,6 +172,7 @@ git push orgin master // 这个之前需要提供 gitHub 账号和密码
 网友都说不行，虾米，我试试开启
 Gitee Pages 服务（开源项目静态效果演示用途）
 <img src="img/articles/article1.JPG">
+这种没人审核的网页要实名防止做坏事在国内需要认证似乎很正常
 等我实名认证后
 
 一年前我在Gitee网站上搭建过，果然链接404了，但我repo的图库还在，也是实名验证问题吗
@@ -173,8 +182,24 @@ Gitee Pages 服务（开源项目静态效果演示用途）
 服务器我有，把项目docs文件夹放在www.junhao.host域名所在的目录下
 使用www.junhao.host/docs即可访问
 但是保险一点，配置一下nginx
-路由www.junhao.host/docs，后面是重定向的位置
+路由www.junhao.host/docs，后面是重定向的位置，这样位置就可以很随意
+```bash
+server{
 
+    # docs文档网站  第一条配置失败，404
+    # location /docs/ {
+    #     root  /xxx/test/docsite;
+    #     index index.html index.htm;
+    # }
+    # 别名 访问docs开头的资源代理到以下目录
+	location ^~/docs {
+    	alias  /xxx/test/docsite/;
+	}
+
+}
+```
+访问试一下：http://www.junhao.host/docs/
+缺点： 更新必须手动更新，不推荐这种方式
 
 ### 部署在Github
 https://github.com/bingganlen/docs
@@ -186,3 +211,26 @@ https://github.com/bingganlen/docs
 Your site is ready to be published at https://bingganlen.github.io/docs/
 
 其它： 一次提交到GitHub和Gitee
+```bash
+[core]
+	repositoryformatversion = 0
+	filemode = false
+	bare = false
+	logallrefupdates = true
+	symlinks = false
+	ignorecase = true
+[submodule]
+	active = .
+[remote "origin"]
+	url = https://gitee.com/xxxx/docs.git
+	url = git@github.com:xxxx/docs.git
+	fetch = +refs/heads/*:refs/remotes/origin/*
+[branch "master"]
+	remote = origin
+	merge = refs/heads/master
+```
+
+代码推送过程中的小bug，GitHub需要SSH免登无认证的连接，才能clone和push，
+新出的Github Token纯属误导（就是一坨屎），生成的token附在remote的url上也不能用。
+个人网站文档更新必须手动更新，无趣；
+码云gitee存在实名认证，似乎所有都不完美

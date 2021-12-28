@@ -48,7 +48,9 @@
       </details>
 
 - 算法  
+    - [start](/zh-cn/算法/readme.md)
     - [二分法学习](/zh-cn/算法/二分法学习.md)
     - [双指针](/zh-cn/算法/双指针.md)
+    - [排序](/zh-cn/算法/排序.md)
 
 

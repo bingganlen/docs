@@ -1,0 +1,81 @@
+/* 大屏幕时，某些图片限制一下宽度 */
+@media screen and (min-width: 800px) {
+    [title=s-w],[title=s-w-sh]{max-width: 80%;}
+}
+[title=s-w-sh]{display: inline-block; border: 1px #eee solid;}
+
+
+
+/* ============== 代码样式优化 ================ */
+
+/* 背景变黑 */
+#main [data-lang]{padding: 0px !important; border-radius: 2px;overflow-x: auto; overflow-y: hidden;}
+#main [v-pre] code{border: 0px red solid; border-radius: 0px; /* background-color: #282828; */ background-color: #191919; color: #FFF;}
+#main [v-pre] code{padding: 1.5em 1.3em; margin-left: 40px !important;}
+/* #main h2{margin-top: 70px;} */
+
+/* 代码行号盒子样式 */
+.code-line-box {list-style-type: none; border-right: 1px solid #000; position: absolute; top: 0; left: 0; width: 40px;  user-select: none;}
+.code-line-box {padding: calc(1.5em + 1px)  0px !important; padding-bottom: calc(1.5em + 20px) !important; margin: 0px !important;}
+.code-line-box {line-height: inherit !important; background-color: #191919; color: #aaa;font-weight: 400;font-size: 0.85em;text-align: center;}
+.code-line-box {font-family: source-code-pro,Menlo,Monaco,Consolas,Courier New,monospace;}
+
+
+/* xml语言样式优化 */
+.lang-xml .token.comment{color: #CDAB53;}
+.lang-xml .token.tag *{color: #db2d20;}
+.lang-xml .token.attr-value{color: #A6E22E;}
+
+/* html语言样式优化 */
+.lang-html .token.comment{color: #CDAB53;}
+.lang-html .token.tag *{color: #db2d20;}
+.lang-html .token.tag .attr-name,
+.lang-html .token.tag .attr-name *{color: #A6E22E; opacity: 0.9;}
+.lang-html .token.tag .attr-value,
+.lang-html .token.tag .attr-value *{color: #E6DB74; opacity: 0.9;}
+
+/* java语言样式优化 */
+#main .lang-java{color: #01a252 !important;; opacity: 1;}
+.lang-java .token.keyword{color: #db2d20;}
+.lang-java .token.namespace,.lang-java .token.namespace *{color: #01A252; opacity: 1;}
+.lang-java .token.class-name,.lang-java .cm-variable{color: #55b5db; opacity: 1;}
+.lang-java .token.comment{color: #CDAB53;}
+.lang-java .token.annotation.punctuation{color: #ddd;}
+.lang-java .token.punctuation{color: #ddd;}
+
+/* yml语言样式优化 */
+#main .lang-yml{color: #01A252 !important; opacity: 1;}
+
+/* yml语言样式优化 */
+#main .lang-url{color: #E96917 !important; opacity: 1;}
+
+/* js语言样式优化 */
+#main .lang-js{color: #01a252 !important;}
+.lang-js .token.comment{color: #CDAB53;}
+/* .lang-js .token.string{color: #fded02;} */
+.lang-js .token.string{color: #ddd;}
+.lang-js .token.punctuation{color: #ddd;}
+
+.gt-container{padding: 1.5em; padding-bottom: 100px;}
+
+/* 调整表格的响应式 */
+#main table{margin-left: 0px;}
+@media screen and (min-width: 800px) {
+    #main table tr th{min-width: 150px;}
+}
+
+/* 提示框加上灰色背景 */
+#main .markdown-section blockquote{padding: 1px 24px 1px 30px; background-color: #f8f8f8;}
+
+/* 行级代码样式 */
+blockquote code {font-weight: 400;}
+.markdown-section strong code{font-family: "宋体";}
+
+/* toc目录树 */
+.toc-box>li{margin-bottom: 15px;}
+.toc-box .toc-h2{list-style-type: none; font-size: 18px; margin-top: 20px;}
+.toc-box .toc-h3,.toc-box .toc-h4{margin-left: 1em;}
+.toc-box .toc-h5,.toc-box .toc-h6{margin-left: 2em;}
+#main .toc-box .toc-h2 a span{color: #34495e;}
+#main .toc-box a{border-color: rgba(0,0,0,0); transition: 0s;}
+#main .toc-box a span{color: inherit;}
