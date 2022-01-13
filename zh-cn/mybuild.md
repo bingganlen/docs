@@ -173,7 +173,8 @@ git push orgin master // 这个之前需要提供 gitHub 账号和密码
 Gitee Pages 服务（开源项目静态效果演示用途）
 <img src="img/articles/article1.JPG">
 这种没人审核的网页要实名防止做坏事在国内需要认证似乎很正常
-等我实名认证后
+等我实名认证后，出现下面页面，强制https打钩，然后直接点击启动
+<img src="img/articles/mybuild/giteepage.JPG">
 
 一年前我在Gitee网站上搭建过，果然链接404了，但我repo的图库还在，也是实名验证问题吗
 
